@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Header --- */
+header{
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    background: #7f6e59;
+    color: #ffffff;
+    height: 2.7em;
+    text-align: center;
+}
+header li{
+    display: inline;
+    padding: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: #fefae8;
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+nav a:hover{
+    font-size: 1.1em;
+    color: #e7a769;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown-content{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #e7a769;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.dropdown-content li:hover{
+    color: #7f6e59;
+}
+
+header img{
+    margin-left: 10em;
+    width: fit-content;
+    height: fit-content;
+}
+#img-a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    margin-left: auto;
+    margin-right: 4em;
+    font-family: 'Poppins', sans-serif;
+    font-size: .8em;
+}
+/* --- Header --- */
+
+
+
+
+
+
+
+/* --- Main --- */
+
+/* Sectiunea 1 */
+.hero-adoptie {
+    display: flex;
+    align-items: center;
+    max-width: 1100px;
+    margin: 40px auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.hero-imagine {
+    flex-basis: 45%;
+}
+
+.hero-imagine img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-continut {
+    flex-basis: 55%;
+    padding: 40px;
+}
+
+.hero-continut h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-continut p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-butoane {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primar {
+    background-color: #ff8c00;
+    color: white;
+}
+.btn-primar:hover {
+    background-color: #e67e00;
+}
+
+.btn-secundar {
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #ccc;
+}
+.btn-secundar:hover {
+    background-color: #eee;
+    border-color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .hero-adoptie {
+        flex-direction: column;
+    }
+
+    .hero-imagine,
+    .hero-continut {
+        flex-basis: 100%;
+    }
+
+    .hero-continut {
+        padding: 30px;
+        text-align: center;
+    }
+    
+    .hero-butoane {
+        justify-content: center;
+    }
+}
+/* Sectiunea 1 */
+
+/* Sectiunea 2 */
+
+.cat-icon{
+    font-family: sans-serif;
+    color: #E7A769;
+    font-size: 1.2em;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.pisici-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.pisica-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pisica-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pisica-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.pisica-card h3 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.pisica-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Sectiunea 2 */
+/* --- Main --- */
+
