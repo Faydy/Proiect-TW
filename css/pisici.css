@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+}
+
+.pagina-pisica {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.pagina-pisica h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #7f6e59;
+    margin-bottom: 30px;
+}
+
+.pisica-continut {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.pisica-imagine {
+    flex-basis: 40%;
+    min-width: 300px;
+    flex-grow: 1;
+}
+
+.pisica-imagine img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.pisica-text {
+    flex-basis: 55%;
+    flex-grow: 1;
+}
+
+.pisica-text h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #E7A769;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.pisica-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.pisica-text ul {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.pisica-text ul li {
+    margin-bottom: 10px;
+}
+
+.pisica-galerie {
+    margin-top: 40px;
+    border-top: 2px solid #f0f0f0;
+    padding-top: 30px;
+}
+
+.pisica-galerie h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #7f6e59;
+    margin-bottom: 20px;
+}
+
+.galerie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.galerie-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galerie-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .pagina-pisica {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .pagina-pisica h1 {
+        font-size: 2.2rem;
+    }
+
+    .pisica-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .pisica-continut {
+        flex-direction: column;
+    }
+}
