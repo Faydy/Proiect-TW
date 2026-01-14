@@ -14,6 +14,8 @@ Proiectul este realizat **fără framework-uri**, folosind doar **HTML si CSS**,
 
 Structura reală (scosă direct din `tree /f`):
 
+```console
+
 Proiect-TW/
 │ fricosu.html
 │ galerie.html
@@ -41,7 +43,7 @@ Proiect-TW/
 ├───sara
 └───urecheatu
 
----
+```
 
 ## ✨ Funcționalități și cerințe îndeplinite
 
