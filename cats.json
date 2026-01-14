@@ -1,0 +1,17 @@
+[
+    {
+        "nume": "Tom",
+        "descriere": "Un motan celebru care fugareste soricei.",
+        "img": "https://upload.wikimedia.org/wikipedia/en/f/f6/Tom_Tom_and_Jerry.png"
+    },
+    {
+        "nume": "Garfield",
+        "descriere": "Adora lasagna si uraste zilele de luni.",
+        "img": "https://upload.wikimedia.org/wikipedia/en/b/bc/Garfield_the_Cat.svg"
+    },
+    {
+        "nume": "Sylvester",
+        "descriere": "Mereu incearca sa il prinda pe Tweety.",
+        "img": "https://upload.wikimedia.org/wikipedia/en/8/82/Sylvester_the_Cat.svg"
+    }
+]

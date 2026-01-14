@@ -7,36 +7,33 @@
     <title>Luna family</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/common.css">
+    <script src="java/main.js" defer></script>
 </head>
 
 <body>
     <header>
         <a href="./index.html" id="img-a"><img src="img/logo.png" alt="Luna family logo"></a>
         <nav>
-            <ul>
-                <li><a href="./index.html">Acasă</a></li>
-                <li class="dropdown">
-                    <a href="">Pisicle mele</a>
-                    <ul class="dropdown-content">
-                        <a href="./luna.html">
-                            <li>Luna</li>
-                        </a>
-                        <a href="./sara.html">
-                            <li>Sara</li>
-                        </a>
-                        <a href="./urecheatu.html">
-                            <li>Urecheatu</li>
-                        </a>
-                        <a href="./fricosu.html">
-                            <li>Fricosu</li>
-                        </a>
-                        <a href="./hasoon.html">
-                            <li>Hasoon</li>
-                        </a>
-                    </ul>
-                </li>
-                <li><a href="./galerie.html">Galerie</a></li>
-            </ul>
+<ul>
+    <li><a href="./index.html">Acasă</a></li>
+    <li class="dropdown">
+        <a href="">Pisicile mele</a>
+        <ul class="dropdown-content">
+            <a href="./luna.html"><li>Luna</li></a>
+            <a href="./sara.html"><li>Sara</li></a>
+            <a href="./urecheatu.html"><li>Urecheatu</li></a>
+            <a href="./fricosu.html"><li>Fricosu</li></a>
+            <a href="./hasoon.html"><li>Hasoon</li></a>
+        </ul>
+    </li>
+    <li><a href="./galerie.html">Galerie</a></li>
+    
+    <li id="login-li"><a href="#" id="open-login">Autentificare</a></li>
+    <li id="user-li" style="display: none;">
+        Salut, <span id="username-display" style="color: #e7a769; font-weight: bold;"></span> 
+        (<a href="#" id="logout-btn">Logout</a>)
+    </li>
+</ul>
         </nav>
     </header>
     <main>
@@ -87,12 +84,111 @@
                 </div>
             </div>
         </section>
+        <section class="interactive-section">
+            <h2>Zona Interactivă & Feedback</h2>
+
+            <div class="control-panel">
+                <button id="btn-random-color" class="btn btn-secundar">Schimbă culoarea titlului aleatoriu</button>
+                <button id="btn-increase-font" class="btn btn-secundar">Mărește fontul mesajelor</button>
+                <p>Apasă tasta <strong>'M'</strong> pentru un mesaj secret!</p>
+                <div id="secret-msg" style="display:none; color: #E7A769; font-weight: bold;">Miau! 🐱</div>
+            </div>
+
+            <div class="form-container" id="contact-container">
+                <h3>Trimite-ne o părere</h3>
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label for="nume">Numele tău:</label>
+                        <input type="text" id="nume" name="nume" placeholder="Ex: Ion Popescu">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" placeholder="email@exemplu.com">
+                        <span id="email-error" class="error-msg"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fav-cat">Pisica favorită:</label>
+                        <select id="fav-cat" name="fav-cat">
+                            <option value="luna">Luna</option>
+                            <option value="sara">Sara</option>
+                            <option value="urecheatu">Urecheatu</option>
+                            <option value="fricosu">Fricosu</option>
+                            <option value="hasoon">Hasoon</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nota">Notă site (1-10): <span id="nota-value">5</span></label>
+                        <input type="range" id="nota" name="nota" min="1" max="10" value="5">
+                    </div>
+
+                    <div class="form-group">
+                        <p>Ai pisici?</p>
+                        <input type="radio" id="da" name="has_cats" value="da" checked>
+                        <label for="da">Da</label>
+                        <input type="radio" id="nu" name="has_cats" value="nu">
+                        <label for="nu">Nu</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mesaj">Mesaj:</label>
+                        <textarea id="mesaj" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter">
+                        <label for="newsletter">Vreau să primesc poze cu pisici (Newsletter)</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="varsta">Vârsta ta:</label>
+                        <input type="number" id="varsta" name="varsta" min="5" max="100" placeholder="Ex: 20">
+                    </div>
+
+                    <button type="submit" class="btn btn-primar">Trimite Mesaj</button>
+                </form>
+            </div>
+
+            <div id="mesaje-salvate">
+                <h3>Mesaje Recente:</h3>
+                <ul id="lista-mesaje">
+                </ul>
+                <button id="sterge-mesaje" class="btn btn-secundar" style="margin-top: 10px;">Șterge Istoricul</button>
+            </div>
+
+            <div class="time-container">
+                <p>Ora curentă: <span id="ceas">--:--:--</span></p>
+            </div>
+        </section>
     </main>
     <div class="paw-trail" style="display: flex; justify-content: center;">
         <span>🐾</span>
         <span>🐾</span>
         <span>🐾</span>
     </div>
+    <section style="text-align: center; margin: 40px 0;">
+    <h2>Prietenii Faimoși (AJAX)</h2>
+    <p>Apasă butonul pentru a încărca date dintr-un fișier JSON extern.</p>
+    <button id="btn-load-json" class="btn btn-primar">Încarcă Prietenii</button>
+    
+    <div id="ajax-container" class="pisici-container" style="margin-top: 20px;"></div>
+</section>
+
+<div id="login-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Autentificare</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label>Utilizator (orice nume):</label>
+                <input type="text" id="login-user" required>
+            </div>
+            <button type="submit" class="btn btn-primar">Intră în cont</button>
+        </form>
+    </div>
+</div>
     <footer>
         <p>&copy; 2025 Luna family</p>
     </footer>
